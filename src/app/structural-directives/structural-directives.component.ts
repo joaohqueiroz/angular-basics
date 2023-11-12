@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class StructuralDirectivesComponent {
   public nome: string = '';
+  public value: number = 0;
   public condition: boolean = true;
   public list: Array<{ nome: string }> = [
     { nome: 'João' },

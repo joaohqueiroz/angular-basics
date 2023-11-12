@@ -16,3 +16,13 @@
 
 <input type="text" [(ngModel)]="nome">
 <button (click)="add()">Add</button>
+
+<hr>
+
+<h2>ngSwitch</h2>
+<input type="number" [(ngModel)]="value">
+
+<div [ngSwitch]="value % 2">
+  <div *ngSwitchCase="0">{{value}} é par</div>
+  <div *ngSwitchDefault>{{value}} é ímpar</div>
+</div>
