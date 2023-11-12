@@ -10,5 +10,11 @@ export class DataBindingComponent {
   public idade: number = 23;
 
   public checkedDisabled: boolean = true;
-  public imgUrl: string = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png';
+  public imgUrl: string =
+    'https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png';
+
+  public alertaInfo = (event: MouseEvent) => {
+    console.log(event);
+    alert('Disparando evento de click!');
+  };
 }
