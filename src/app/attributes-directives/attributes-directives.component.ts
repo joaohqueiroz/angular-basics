@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AttributesDirectivesComponent {
   public isActive: boolean = true;
+  public date: Date = new Date();
 
   public handleIsActive = (): boolean => (this.isActive = !this.isActive);
 }
