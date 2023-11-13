@@ -1,0 +1,11 @@
+<hr>
+
+<h2>ngClass</h2>
+
+<p>Click to change color</p>
+<p (click)="handleIsActive()" [ngClass]="{'active': isActive, 'disabled': !isActive}">ngClass</p>
+
+<hr>
+
+<h2>Pipes</h2>
+<p>{{date | date: 'dd/MM/yyyy'}}</p>
