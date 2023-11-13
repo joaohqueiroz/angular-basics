@@ -11,15 +11,13 @@ export class StructuralDirectivesComponent {
   public condition: boolean = true;
   public list: Array<{ nome: string }> = [
     { nome: 'João' },
-    { nome: 'Aldair' },
-    { nome: 'Ceza' },
     { nome: 'Diana' },
   ];
 
   public switchCondition = (): boolean => (this.condition = !this.condition);
 
   public add = () => {
-    this.list.push({ nome: this.nome });
+    this.nome.length > 0 && this.list.push({ nome: this.nome });
     this.nome = '';
   };
 }

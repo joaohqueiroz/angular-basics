@@ -22,7 +22,8 @@
 <h2>ngSwitch</h2>
 <input type="number" [(ngModel)]="value">
 
-<div [ngSwitch]="value % 2">
+<div [ngSwitch]="value && value % 2">
   <div *ngSwitchCase="0">{{value}} é par</div>
-  <div *ngSwitchDefault>{{value}} é ímpar</div>
+  <div *ngSwitchCase="1">{{value}} é ímpar</div>
+  <div *ngSwitchDefault>O campo não pode estar vazio</div>
 </div>
