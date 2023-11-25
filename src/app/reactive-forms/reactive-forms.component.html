@@ -1,0 +1,15 @@
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+  <input type="text" formControlName="firstName">
+  <span
+    *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.dirty || cadastroForm.get('firstName')?.touched)">
+    Favor digitar nome
+  </span>
+  <br>
+  <input type="text" formControlName="lastName" maxlength="5">
+  <span
+    *ngIf="cadastroForm.get('lastName')?.errors && (cadastroForm.get('lastName')?.dirty || cadastroForm.get('lastName')?.touched)">
+    Favor digitar no minimo {{ cadastroForm.get("lastName")?.errors?.['minlength']?.requiredLength }} caracteres.
+  </span>
+  <br>
+  <button [disabled]="cadastroForm.invalid">Enviar</button>
+</form>
