@@ -6,11 +6,8 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent
-  },
-  {
-    path: 'reactive-forms',
-    component: ReactiveFormsComponent
+    component: AppComponent,
+    pathMatch: 'full'
   }
 ];
 
